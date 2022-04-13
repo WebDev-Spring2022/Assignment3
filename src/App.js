@@ -1,7 +1,8 @@
 const App = () => {
-
+  
   const [username, setUsername] = useState("User")
   const [showCredits, setShowCredits] = useState(true)
+  const [showProfileForm, setShowProfileForm] = useState(false)
   const [creditList, setCreditList] = useState([
     {
       description: "Food",
@@ -38,10 +39,24 @@ const App = () => {
     }
   ])
 
+  const updateProfile = (usernameText, backgroundColorText, textColorText) =>{
+
+    if(usernameText){
+      setUsername(usernameText)
+    }
+    console.log(usernameElement)
+    console.log(textColorText)
+    console.log(backgroundColorText)
+  }
 
   return(
     <div>
       <Banner username={username}/>
+      <Content  onDisplayCredits = {() => setShowCredits(!showCredits)}
+                onDisplayProfileForm = {() => setShowProfileForm(!showProfileForm)} 
+                showCredits = {showCredits} showProfileForm = {showProfileForm}
+                onUpdate={updateProfile}
+          />
       {showCredits ? <h1>Credits</h1> : <h1> Debits </h1>}
       <Itemlist items = {showCredits ? creditList : debitList}/>
 
