@@ -9,7 +9,7 @@ const Content = ({showCredits, onDisplayCredits, showProfileForm, onUpdate, onDi
     
     return(
         <div>
-            <div>
+            <div className = "header">
                 <Button color = {showCredits ? "green" : "blue" }text = {showCredits ? "show Debits" : "show Credits"} onClick = {onDisplayCredits}/>
                 <Button color = {showProfileForm ? "red" : "silver"} text = {showProfileForm ? "Close Form" : "Update Profile"} onClick = {onDisplayProfileForm}/>
             </div>

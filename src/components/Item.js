@@ -1,6 +1,6 @@
 const Item = ({item}) =>{
     return(
-        <div>
+        <div className = "item">
             {/* <p>{item.id}</p> */}
             <h3>{item.description}</h3>
             <p>Transaction Amount: ${item.amount} </p>

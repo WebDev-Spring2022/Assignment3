@@ -62,9 +62,9 @@ const App = () => {
     setDebitList(debits);
   }
 
+  // Changes the username, username text color, and username background color 
   const updateProfile = (usernameText, backgroundColorText, textColorText) =>{
 
-    
     if(usernameText){
       setUsername(usernameText)
     }
@@ -75,7 +75,6 @@ const App = () => {
     if(backgroundColorText){
       usernameElement.style.backgroundColor = backgroundColorText
     }
-
     setShowProfileForm(false)
     // console.log(usernameElement)
     // console.log(textColorText)
@@ -88,11 +87,12 @@ const App = () => {
 
 
   return(
-    <div>
+    <div className = "container">
       <Banner username={username}/>
       <Content  onDisplayCredits = {() => setShowCredits(!showCredits)}
                 onDisplayProfileForm = {() => setShowProfileForm(!showProfileForm)} 
-                showCredits = {showCredits} showProfileForm = {showProfileForm}
+                showCredits = {showCredits} 
+                showProfileForm = {showProfileForm}
                 onUpdate={updateProfile}
           />
       {showCredits ? <h1>Credits</h1> : <h1> Debits </h1>}
