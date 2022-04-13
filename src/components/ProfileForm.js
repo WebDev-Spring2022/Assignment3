@@ -30,13 +30,13 @@ const ProfileForm = ({onUpdate}) => {
                 </div>
                 <div>
                     <label> Set New Background Color: </label>
-                    <input type = "text" placeholder= "Enter a color in hex"
+                    <input type = "text" placeholder= "Ex: #00ff00"
                     value = {backgroundColorText} onChange={(e) => setBackgroundColorText(e.target.value)}>     
                     </input>
                 </div>
                 <div>
                     <label> Set New Text Color: </label>
-                    <input type = "text" placeholder= "Enter a color in hex"
+                    <input type = "text" placeholder= "Ex: #00ff00"
                     value = {textColorText} onChange={(e) => setTextColorText(e.target.value)}>     
                     </input>
                 </div>
